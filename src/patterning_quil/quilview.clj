@@ -1,4 +1,4 @@
-(ns patterning_quil.quilview
+(ns patterning-quil.quilview
   (:require [quil.core :refer :all])
   (:require [patterning.sshapes :as sshapes])
   (:require [patterning.groups :refer []])
