@@ -13,13 +13,11 @@
   (:require [patterning.view :refer [make-txpt ]])
   (:require [patterning.color :refer [p-color]])
 
-  (:require [patterning.examples.tutorial :as tutorial])
+  (:require [patterning.examples.city :as city])
   (:require [patterning.examples.framedplant :as framedplant])
   (:require [patterning.examples.design_language1 :as design-language])
   (:require [patterning.library.symbols :as symbols])
 
-  (:require [patterning.examples.interactive :as interactive])
-  (:require [patterning.examples.testing :as testing])
 
   (:require [quil.core :refer :all])
   (:require [patterning_quil.quilview :refer :all]) )
@@ -50,6 +48,7 @@
                                        (iterate (partial + 0.15) 0)
                                        (iterate (partial groups/scale 0.97) t))))
 
+(def final-pattern (city/city 7))
 (comment
   (defn f-seq [fs patterns] (map (fn [[f p]] (f p)) (map vector fs patterns)))
 
